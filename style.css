@@ -1,3 +1,19 @@
 body {
     background-color: #232323;
 }
+#boxes {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.box {
+    width: 46%;
+    height: 46%;
+    margin: 2%;
+}
+.first-box {background-color: green;}
+.second-box {background-color: red;}

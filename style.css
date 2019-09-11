@@ -18,6 +18,23 @@ h1 {
     color: #fff;
     margin: 0 auto 15px;
 }
+#controls {
+    width: 400px;
+    font-size: 25px;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
 #btns {
     margin-bottom: 20px;
 }

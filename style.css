@@ -35,9 +35,20 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: aquamarine;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .box {
     width: 20px;
     height: 20px;
+}
+.purple {
     background-color: purple;
 }

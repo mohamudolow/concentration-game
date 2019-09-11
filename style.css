@@ -73,3 +73,14 @@ h1 {
 .purple {
     background-color: purple;
 }
+
+/*mobile & tablets*/
+@media only screen and (max-width: 768px) {
+  #gameScope {
+    width: 80%;
+      height: 70vh;
+  }
+    #controls {
+        width: 320px;
+    }
+}

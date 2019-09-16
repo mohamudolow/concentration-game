@@ -8,10 +8,12 @@ const playButton = document.querySelector(".fa-play-circle");
 const pauseButton = document.querySelector(".fa-pause-circle");
 var score = document.getElementById("score");
 var countdown = document.getElementById("count");
+var gameOn = false;
+var gameBox;
 
 //create boxes
 for(var i=0; i<boxes; i++) {
-    const gameBox = document.createElement('div');
+    gameBox = document.createElement('div');
     gameBox.classList.add(box);
     gameScope.append(gameBox);
 }
@@ -48,11 +50,12 @@ Try again!`);
 // game score
 gameBoxes.forEach((gamebox) => {
     gamebox.addEventListener("click", function() {
-        if(gamebox.classList.contains("purple")) {
+        if(gamebox.classList.contains("purple") && gameOn === true) {
             gamebox.classList.remove("purple");
             score.innerHTML = parseFloat(score.innerHTML) + 1;
         } else {
             score.innerHTML = parseFloat(score.innerHTML) + 0;
+            alert("resume game to continue playing!");
         }
 });
                   });
@@ -69,9 +72,11 @@ var hideBoxInterval;
 playButton.addEventListener("click", function() {
     randomBoxInterval = setInterval(randomBox, 1500);
     hideBoxInterval = setInterval(hideBox, 1600);
+    gameOn = true;
 });
 
 pauseButton.addEventListener("click", function() {
     clearInterval(randomBoxInterval);
     clearInterval(hideBoxInterval);
+    gameOn = false;
 });

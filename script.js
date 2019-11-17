@@ -53,9 +53,10 @@ gameBoxes.forEach((gamebox) => {
         if(gamebox.classList.contains("purple") && gameOn === true) {
             gamebox.classList.remove("purple");
             score.innerHTML = parseFloat(score.innerHTML) + 1;
+        } else if(gameOn === false) {
+            alert("resume game to continue scoring!");
         } else {
             score.innerHTML = parseFloat(score.innerHTML) + 0;
-            alert("resume game to continue playing!");
         }
 });
                   });
